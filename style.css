@@ -1,5 +1,5 @@
 body,
-html{
+html {
     margin: 0;
     padding: 0;
     font-family: 'sans';
@@ -7,22 +7,26 @@ html{
     background: #19172e;
     user-select: none;
 }
-h1{
+
+h1 {
     font-size: 5.5rem;
     color: #feffe2;
-    font-family: "arvo",cursive;
+    font-family: "arvo", cursive;
     text-align: center;
 }
-span{
+
+span {
     font-weight: 100;
 }
-.keys{
+
+.keys {
     display: flex;
     flex: 1;
     min-height: 40vh;
     align-items: center;
     justify-content: center;
 }
+
 .key {
     border: .4rem solid white;
     border-radius: .5rem;
@@ -34,32 +38,32 @@ span{
     text-align: center;
     color: white;
     background-color: #212121;
-  }
-  
-  .playing {
+}
+
+.playing {
     transform: scale(1.1);
     border-color: #bb86fc;
     box-shadow: 0 0 1rem #bb86fc;
-  }
-  
-  kbd {
+}
+
+kbd {
     display: block;
     font-size: 4rem;
-  }
-  
-  .sound {
+}
+
+.sound {
     font-size: 1.2rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .1rem;
     color: #bb86fc;
-  }
-  
-  kbd {
+}
+
+kbd {
     cursor: pointer;
-  }
-  
-  footer {
+}
+
+footer {
     text-align: center;
     color: white;
     font-size: 1.5rem;
@@ -69,5 +73,68 @@ span{
     bottom: 0;
     margin-bottom: 0;
     padding: 5px;
-  }
-  
+}
+
+@media only screen and (max-width: 600px) {
+    .keys {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .key {
+        width: 100%;
+        margin: 0.5rem 0;
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .keys {
+        flex-wrap: wrap;
+    }
+
+    .key {
+        width: 45%;
+        margin: 0.5rem;
+        font-size: 1.2rem;
+        padding: 0.7rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    footer {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .keys {
+        display: flex;
+    }
+
+    .key {
+        width: 10rem;
+        margin: 1rem;
+        font-size: 1.5rem;
+        padding: 1rem .5rem;
+    }
+
+    h1 {
+        font-size: 5.5rem;
+    }
+
+    footer {
+        font-size: 1.5rem;
+    }
+}
